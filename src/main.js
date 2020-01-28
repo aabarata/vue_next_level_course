@@ -11,6 +11,7 @@ Vue.component('BaseIcon', BaseIcon)
 
 Vue.config.productionTip = false
 
+//Automatically register globally all the components started by Base in the folder components
 const requireComponent = require.context(
   './components',
   false,
@@ -26,6 +27,7 @@ requireComponent.keys().forEach(fileName => {
 
   Vue.component(componentName, componentConfig.default || componentConfig)
 })
+//Finish global register
 
 new Vue({
   router,
