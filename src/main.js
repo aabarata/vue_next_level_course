@@ -5,10 +5,13 @@ import App from './App.vue'
 import router from './router'
 import store from './store/store'
 import BaseIcon from '@/components/BaseIcon'
-import 'nprogress/nprogress.css'
 import Vuelidate from 'vuelidate'
+import DateFilter from './filters/date'
+import 'nprogress/nprogress.css'
 
 Vue.use(Vuelidate)
+// Import globally a filter (can be also done inside a component)
+Vue.filter('date', DateFilter)
 Vue.config.productionTip = false
 
 Vue.component('BaseIcon', BaseIcon)
