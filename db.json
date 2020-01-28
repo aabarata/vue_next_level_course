@@ -303,6 +303,42 @@
       "date": "",
       "time": "",
       "attendees": []
+    },
+    {
+      "id": 2742985,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "housing",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "vdb",
+      "description": "dfdfb",
+      "location": "dfbdb",
+      "date": "2020-01-02T17:37:00.000Z",
+      "time": "5:00",
+      "attendees": []
+    },
+    {
+      "id": 8918044,
+      "user": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "category": "nature",
+      "organizer": {
+        "id": "abc123",
+        "name": "Adam"
+      },
+      "title": "AAAAAAAAAAAAAFFFFFFFFFFF",
+      "description": "fdvdfv",
+      "location": "dfvdfv",
+      "date": "2020-01-01T17:39:00.000Z",
+      "time": "6:00",
+      "attendees": []
     }
   ]
 }

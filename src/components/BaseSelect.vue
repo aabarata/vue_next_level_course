@@ -13,26 +13,15 @@
 </template>
 
 <script>
+    import { formFieldMixin } from '@/mixins/formFieldMixin'
+
     export default {
-        // To the props 'type' and 'placeholder' don't be placed in the first div
-        // -> Used together with v-bind="$attrs" to say where we want to apply them
-        inheritAttrs: false,
+        mixins: [formFieldMixin],
         props: {
-            label: {
-                type: String,
-                default: ''
-            },
             options: {
                 type: Array,
                 required: true
-            },
-            error: Boolean,
-            value: [String, Number]
-        },
-        methods: {
-            updateValue(event) {
-                this.$emit('input', event.target.value)
             }
-        }
+        },
     }
 </script>
