@@ -6,10 +6,12 @@ import router from './router'
 import store from './store/store'
 import BaseIcon from '@/components/BaseIcon'
 import 'nprogress/nprogress.css'
+import Vuelidate from 'vuelidate'
+
+Vue.use(Vuelidate)
+Vue.config.productionTip = false
 
 Vue.component('BaseIcon', BaseIcon)
-
-Vue.config.productionTip = false
 
 //Automatically register globally all the components started by Base in the folder components
 const requireComponent = require.context(

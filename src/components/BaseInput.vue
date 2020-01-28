@@ -1,7 +1,7 @@
 <template>
     <div>
         <label v-if="label">{{ label }}</label>
-        <input v-bind="$attrs" @input="updateValue">
+        <input :class="{ error: error }" :value="value" v-bind="$attrs" v-on="listeners" @input="updateValue">
     </div>
 </template>
 
@@ -15,7 +15,18 @@
                 type: String,
                 default: ''
             },
+            error: Boolean,
             value: [String, Number]
+        },
+        computed: {
+            // To resolve conflict between using @input and v-on="$listeners" at the same time
+            // -> Like this we create a new listeners object where the input method is overwrite 
+            listeners() {
+                return {
+                    ...this.$listeners,
+                    input: this.updateValue 
+                }
+            }
         },
         methods: {
             updateValue(event) {
